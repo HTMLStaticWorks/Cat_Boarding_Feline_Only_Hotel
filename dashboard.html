@@ -1,0 +1,378 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whisker Suites | Admin Dashboard</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <!-- Bootstrap 5 CSS via CDN -->
+    <link id="bootstrap-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom StyleSheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <style>
+        /* Override body padding for dashboard structure */
+        body {
+            padding-top: 0 !important;
+            background-color: var(--tertiary-color);
+        }
+        .dashboard-container {
+            display: flex;
+            min-height: 100vh;
+        }
+        .sidebar {
+            width: 260px;
+            background-color: var(--primary-color);
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1040;
+            transition: all 0.3s ease;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+        }
+        .sidebar-brand {
+            padding: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .sidebar-menu {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+        .sidebar-link {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.8rem 1.5rem;
+            color: rgba(255, 255, 255, 0.75);
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 470;
+            font-size: 1.05rem;
+        }
+        .sidebar-link:hover, .sidebar-link.active {
+            color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.08);
+            border-left: 4px solid var(--secondary-color);
+        }
+        .dashboard-content {
+            flex-grow: 1;
+            margin-left: 260px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+        .top-navbar {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--card-border);
+            padding: 1rem 1.5rem;
+        }
+        .content-body {
+            padding: 2rem;
+            flex-grow: 1;
+        }
+        .dashboard-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 6px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            margin-bottom: 1.5rem;
+        }
+
+        /* RTL Layout Adjustments */
+        [dir="rtl"] .sidebar {
+            left: auto;
+            right: 0;
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.05);
+        }
+        [dir="rtl"] .dashboard-content {
+            margin-left: 0;
+            margin-right: 260px;
+        }
+        [dir="rtl"] .sidebar-link:hover, [dir="rtl"] .sidebar-link.active {
+            border-left: none;
+            border-right: 4px solid var(--secondary-color);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 991.98px) {
+            .sidebar {
+                left: -260px;
+            }
+            [dir="rtl"] .sidebar {
+                right: -260px;
+                left: auto;
+            }
+            .sidebar.show-sidebar {
+                left: 0;
+            }
+            [dir="rtl"] .sidebar.show-sidebar {
+                right: 0;
+                left: auto;
+            }
+            .dashboard-content {
+                margin-left: 0;
+            }
+            [dir="rtl"] .dashboard-content {
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <a class="d-flex align-items-center text-decoration-none" href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#ffffff" class="bi bi-cat me-2" viewBox="0 0 16 16">
+                        <path d="M14 13.5a.5.5 0 0 1-.5.5h-6a.5.5 0 0 1-.5-.5c0-1.105.895-2 2-2h1c1.105 0 2 .895 2 2M10 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4m.5-3a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m-4.225.105a.5.5 0 0 0-.65-.228L3.12 6.136a.5.5 0 1 0 .428.904l2.505-1.253a.5.5 0 0 0 .228-.65L5.775 5.1M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5c0-1.307-.821-2.42-2-2.859V9.5a.5.5 0 0 0-.154-.354l-.846-.846v-.868c.552-.16 1-.72 1-1.378a1.5 1.5 0 0 0-3 0c0 .657.448 1.218 1 1.378v.868L8.646 9.146A.5.5 0 0 0 8.5 9.5v1.141C7.32 11.08 6.5 12.193 6.5 13.5v.5H2.5c-.552 0-1-.448-1-1v-4.141c0-1.12.637-2.17 1.646-2.67l2.5-1.25a.5.5 0 0 0 .228-.651l-.5-1a.5.5 0 0 0-.895 0l-.5 1A1.5 1.5 0 0 1 3.5 5h-.646a1.5 1.5 0 0 0-1.5 1.5v7Z"/>
+                    </svg>
+                    <span style="font-weight: 580; font-size: 1.1rem; color: #ffffff; font-family: 'Outfit'; letter-spacing: 0.5px;">Whisker Suites</span>
+                </a>
+            </div>
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="#" class="sidebar-link active" data-section="analytics">
+                        <i class="bi bi-graph-up"></i> Analytics
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-link" data-section="users">
+                        <i class="bi bi-people"></i> Users
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-link" data-section="orders">
+                        <i class="bi bi-calendar-check"></i> Orders
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-link" data-section="messages">
+                        <i class="bi bi-chat-left-text"></i> Messages
+                    </a>
+                </li>
+                <li class="mt-4 border-top border-white-10 pt-3">
+                    <a href="index.html" class="sidebar-link text-white-50">
+                        <i class="bi bi-box-arrow-left"></i> Logout
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="dashboard-content">
+            <!-- Top Navbar -->
+            <nav class="top-navbar d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                    <button class="btn btn-outline-primary d-lg-none" id="sidebar-toggle-btn" type="button" aria-label="Toggle Sidebar">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <h1 class="h4-title mb-0" style="font-size: 1.5rem;">Admin Dashboard</h1>
+                </div>
+
+                <!-- Theme/RTL Controls + Notifications + Profile -->
+                <div class="d-flex align-items-center gap-3">
+                    <button class="toggle-btn" id="theme-toggle" type="button"><i class="bi bi-moon-fill"></i></button>
+                    <button class="toggle-btn" id="rtl-toggle" type="button"><span class="toggle-text" style="font-size: 0.75rem; font-weight: 600;">RTL</span></button>
+                    
+                    <a href="coming-soon.html" class="text-dark position-relative" aria-label="Notifications">
+                        <i class="bi bi-bell fs-5"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.65rem;">3</span>
+                    </a>
+                    
+                    <div class="d-flex align-items-center gap-2 border-start ps-3">
+                        <i class="bi bi-person-circle fs-4"></i>
+                        <span class="small-text d-none d-sm-inline font-weight-500">Elena Rostova</span>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Dashboard Content Body -->
+            <main class="content-body">
+                <div class="mb-4">
+                    <h2 class="h3-title mb-1" style="font-size: 1.8rem;">Welcome back, Elena</h2>
+                    <p class="small-text text-muted">Here is the active summary of Whisker Suites feline sanctuary bookings.</p>
+                </div>
+
+                <!-- SECTION 1: ANALYTICS -->
+                <div class="dashboard-section" id="analytics">
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="dashboard-card">
+                                <span class="text-muted small-text d-block mb-1">Active Guests</span>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="fs-3 font-weight-580 text-primary">14 / 18</span>
+                                    <span class="badge bg-success-subtle text-success">77% Full</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="dashboard-card">
+                                <span class="text-muted small-text d-block mb-1">Pending Requests</span>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="fs-3 font-weight-580 text-primary">6</span>
+                                    <span class="badge bg-warning-subtle text-warning">Requires Review</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="dashboard-card">
+                                <span class="text-muted small-text d-block mb-1">Unread Messages</span>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="fs-3 font-weight-580 text-primary">3</span>
+                                    <span class="badge bg-danger-subtle text-danger">Inbox</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="dashboard-card">
+                                <span class="text-muted small-text d-block mb-1">Vet Coordination Logs</span>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="fs-3 font-weight-580 text-primary">4 Active</span>
+                                    <span class="badge bg-primary-subtle text-primary">All Insured</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bookings Chart Card -->
+                    <div class="dashboard-card">
+                        <h3 class="h4-title mb-4">Guest Bookings Per Month</h3>
+                        <div id="bookings-chart" class="w-100" style="min-height: 250px;"></div>
+                    </div>
+                </div>
+
+                <!-- SECTION 2: USERS (Table scrollable horizontally on mobile) -->
+                <div class="dashboard-section" id="users" style="display: none;">
+                    <div class="dashboard-card">
+                        <h3 class="h4-title mb-4">Registered Feline Owners</h3>
+                        <div class="table-responsive">
+                            <table class="table table-striped align-middle text-start">
+                                <thead>
+                                    <tr>
+                                        <th>Owner Name</th>
+                                        <th>Email Address</th>
+                                        <th>Cat Guest</th>
+                                        <th>Breed</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Sarah Jenkins</strong></td>
+                                        <td>sarah@example.com</td>
+                                        <td>Milo</td>
+                                        <td>Ragdoll</td>
+                                        <td><button class="btn btn-sm btn-custom-secondary py-1 px-3">Details</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>David Vance</strong></td>
+                                        <td>david@example.com</td>
+                                        <td>Oscar</td>
+                                        <td>Siamese</td>
+                                        <td><button class="btn btn-sm btn-custom-secondary py-1 px-3">Details</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Laura Campbell</strong></td>
+                                        <td>laura@example.com</td>
+                                        <td>Luna</td>
+                                        <td>Maine Coon</td>
+                                        <td><button class="btn btn-sm btn-custom-secondary py-1 px-3">Details</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION 3: ORDERS / BOOKINGS -->
+                <div class="dashboard-section" id="orders" style="display: none;">
+                    <div class="dashboard-card">
+                        <h3 class="h4-title mb-4">Active Suite Reservations</h3>
+                        <div class="table-responsive">
+                            <table class="table table-striped align-middle text-start">
+                                <thead>
+                                    <tr>
+                                        <th>Cat Guest</th>
+                                        <th>Suite Choice</th>
+                                        <th>Check-In</th>
+                                        <th>Check-Out</th>
+                                        <th>Status</th>
+                                        <th>Medical Log</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Milo</strong></td>
+                                        <td>Deluxe Patio Suite</td>
+                                        <td>June 24, 2026</td>
+                                        <td>June 30, 2026</td>
+                                        <td><span class="badge bg-success">Confirmed</span></td>
+                                        <td>None</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Oscar</strong></td>
+                                        <td>Royal Penthouse</td>
+                                        <td>June 25, 2026</td>
+                                        <td>July 04, 2026</td>
+                                        <td><span class="badge bg-success">Confirmed</span></td>
+                                        <td><span class="badge bg-danger">Insulin daily</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Luna</strong></td>
+                                        <td>Classic Cozy Condo</td>
+                                        <td>June 28, 2026</td>
+                                        <td>July 02, 2026</td>
+                                        <td><span class="badge bg-warning text-dark">Pending</span></td>
+                                        <td>Raw food prep</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION 4: MESSAGES -->
+                <div class="dashboard-section" id="messages" style="display: none;">
+                    <div class="dashboard-card">
+                        <h3 class="h4-title mb-4">Inquiries & Message Inbox</h3>
+                        <div class="list-group">
+                            <div class="list-group-item list-group-item-action text-start p-3 mb-2 border rounded" style="border-radius: 6px;">
+                                <div class="d-flex w-100 justify-content-between mb-2">
+                                    <h4 class="h5-title mb-0" style="font-size: 1.1rem;">Sarah Jenkins</h4>
+                                    <small class="text-muted">June 22, 2026</small>
+                                </div>
+                                <p class="mb-3 small-text">"Hi Elena, does Milo need to bring his own climbing tree or are the suite shelves sufficient?"</p>
+                                <button class="btn btn-sm btn-custom-primary py-1 px-3">Reply</button>
+                            </div>
+                            <div class="list-group-item list-group-item-action text-start p-3 mb-2 border rounded" style="border-radius: 6px;">
+                                <div class="d-flex w-100 justify-content-between mb-2">
+                                    <h4 class="h5-title mb-0" style="font-size: 1.1rem;">Laura Campbell</h4>
+                                    <small class="text-muted">June 21, 2026</small>
+                                </div>
+                                <p class="mb-3 small-text">"I have submitted the immunization log for Luna. Can you verify if the clinic release form looks OK?"</p>
+                                <button class="btn btn-sm btn-custom-primary py-1 px-3">Reply</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper JS via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Main JS -->
+    <script src="assets/js/main.js"></script>
+    <!-- Custom Dashboard JS -->
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

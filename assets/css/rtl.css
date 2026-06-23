@@ -1,0 +1,52 @@
+/* RTL Specific Layout Overrides */
+[dir="rtl"] body {
+    text-align: right;
+}
+
+[dir="rtl"] .password-toggle-icon {
+    left: 15px;
+    right: auto;
+}
+
+[dir="rtl"] #back-to-top {
+    right: auto;
+    left: 30px;
+}
+
+[dir="rtl"] footer .social-icons a {
+    margin-right: 0;
+    margin-left: 1rem;
+}
+
+[dir="rtl"] .section-centered ul {
+    text-align: right;
+    display: inline-block;
+}
+
+[dir="rtl"] .ms-auto {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+
+[dir="rtl"] .me-auto {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+
+[dir="rtl"] .text-start {
+    text-align: right !important;
+}
+
+[dir="rtl"] .text-end {
+    text-align: left !important;
+}
+
+/* Dashboard specific RTL flips */
+[dir="rtl"] .sidebar {
+    border-right: none;
+    border-left: 1px solid var(--card-border);
+}
+
+[dir="rtl"] .sidebar-nav {
+    padding-right: 0;
+}

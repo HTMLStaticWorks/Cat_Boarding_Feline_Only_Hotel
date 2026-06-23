@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whisker Suites | Boarding Suite Details</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <meta name="description" content="Read in-depth specifications of our quiet suites, climbing layout design, HEPA filter ventilation, and medical check guidelines.">
+    <!-- Bootstrap 5 CSS via CDN -->
+    <link id="bootstrap-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom StyleSheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+    <!-- Sticky Header Navigation -->
+    <header class="sticky-header">
+        <nav class="navbar navbar-expand-xl navbar-light py-0">
+            <div class="container d-flex align-items-center justify-content-between">
+                <a class="navbar-brand d-flex align-items-center" href="index.html" style="max-width: 180px; height: 50px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="var(--primary-color)" class="bi bi-cat me-2" viewBox="0 0 16 16">
+                        <path d="M14 13.5a.5.5 0 0 1-.5.5h-6a.5.5 0 0 1-.5-.5c0-1.105.895-2 2-2h1c1.105 0 2 .895 2 2M10 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4m.5-3a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m-4.225.105a.5.5 0 0 0-.65-.228L3.12 6.136a.5.5 0 1 0 .428.904l2.505-1.253a.5.5 0 0 0 .228-.65L5.775 5.1M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5c0-1.307-.821-2.42-2-2.859V9.5a.5.5 0 0 0-.154-.354l-.846-.846v-.868c.552-.16 1-.72 1-1.378a1.5 1.5 0 0 0-3 0c0 .657.448 1.218 1 1.378v.868L8.646 9.146A.5.5 0 0 0 8.5 9.5v1.141C7.32 11.08 6.5 12.193 6.5 13.5v.5H2.5c-.552 0-1-.448-1-1v-4.141c0-1.12.637-2.17 1.646-2.67l2.5-1.25a.5.5 0 0 0 .228-.651l-.5-1a.5.5 0 0 0-.895 0l-.5 1A1.5 1.5 0 0 1 3.5 5h-.646a1.5 1.5 0 0 0-1.5 1.5v7Z"/>
+                    </svg>
+                    <span style="font-weight: 580; font-size: 1.15rem; color: var(--primary-color); font-family: 'Outfit', sans-serif; letter-spacing: 0.5px;">Whisker Suites</span>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <div class="collapse navbar-collapse desktop-nav" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home 1</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="d-flex align-items-center gap-2">
+                    <button class="toggle-btn" id="theme-toggle" type="button"><i class="bi bi-moon-fill"></i></button>
+                    <button class="toggle-btn" id="rtl-toggle" type="button"><span class="toggle-text" style="font-size: 0.75rem; font-weight: 600;">RTL</span></button>
+                    <a href="login.html" class="btn-custom-primary px-3 py-2 d-none d-sm-inline-flex" style="font-size: 0.95rem;">Login</a>
+                    <button class="navbar-toggler mobile-hamburger" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="offcanvas offcanvas-start mobile-hamburger" tabindex="-1" id="mobileMenu">
+            <div class="offcanvas-header border-bottom">
+                <h5 class="offcanvas-title d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="var(--primary-color)" class="bi bi-cat me-2" viewBox="0 0 16 16">
+                        <path d="M14 13.5a.5.5 0 0 1-.5.5h-6a.5.5 0 0 1-.5-.5c0-1.105.895-2 2-2h1c1.105 0 2 .895 2 2M10 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4m.5-3a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m-4.225.105a.5.5 0 0 0-.65-.228L3.12 6.136a.5.5 0 1 0 .428.904l2.505-1.253a.5.5 0 0 0 .228-.65L5.775 5.1M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5c0-1.307-.821-2.42-2-2.859V9.5a.5.5 0 0 0-.154-.354l-.846-.846v-.868c.552-.16 1-.72 1-1.378a1.5 1.5 0 0 0-3 0c0 .657.448 1.218 1 1.378v.868L8.646 9.146A.5.5 0 0 0 8.5 9.5v1.141C7.32 11.08 6.5 12.193 6.5 13.5v.5H2.5c-.552 0-1-.448-1-1v-4.141c0-1.12.637-2.17 1.646-2.67l2.5-1.25a.5.5 0 0 0 .228-.651l-.5-1a.5.5 0 0 0-.895 0l-.5 1A1.5 1.5 0 0 1 3.5 5h-.646a1.5 1.5 0 0 0-1.5 1.5v7Z"/>
+                    </svg>
+                    <span>Whisker Suites</span>
+                </h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav flex-column gap-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home 1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="mt-4 pt-3 border-top">
+                    <a href="login.html" class="btn-custom-primary w-100 py-2">Login</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Center-aligned Hero -->
+        <section class="hero-section hero-bg-img hero-details text-center">
+            <div class="container py-4">
+                <h1 class="display-3 text-white" style="font-weight: 580;">Suite Specifications</h1>
+                <p class="lead-text text-white mb-0" style="font-weight: 430;">Detailed dimensions, comfort elements, and vet-supervised security systems in my suites.</p>
+            </div>
+        </section>
+
+        <!-- Section 2: In-depth Suite & Amenity Breakdown -->
+        <section class="section-centered py-5">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6 text-start">
+                        <h2 class="mb-4">Crafted for Instinctual Security</h2>
+                        <p class="mb-3">Cats require elevated spots to feel safe and secure when observing new environments. I have custom-built every suite with vertical play steps, allowing guests to climb up to a cozy observation nest that is insulated from other suites.</p>
+                        <p class="mb-4">Additionally, a dedicated veterinary monitoring program ensures that I check vital signs, hydration states, and feeding levels twice daily, logging all metrics for your peace of mind.</p>
+                        <ul class="mb-4">
+                            <li>Multi-level solid wood construction (no wire cages)</li>
+                            <li>Separate ventilation filters for individual suites</li>
+                            <li>Private litter drawers with odor-absorbing carbon filters</li>
+                        </ul>
+                        <a href="booking.html" class="btn-custom-primary">Book a Private Suite</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1591871937573-74dbba515c4c?q=80&w=600&auto=format&fit=crop" alt="Vertical Climbing Structure" style="border-radius: 6px; border: 2px solid var(--card-border); max-width: 500px; height: 350px; object-fit: cover; width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: FAQ and Suite Pricing Details -->
+        <section class="bg-light py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Suite Pricing & Inclusions</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="table-responsive bg-white p-4 border rounded" style="border-radius: 6px;">
+                            <table class="table table-striped align-middle text-start">
+                                <thead>
+                                    <tr>
+                                        <th>Suite Type</th>
+                                        <th>Dimensions</th>
+                                        <th>Ideal For</th>
+                                        <th>Daily Rate</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Classic Cozy Condo</strong></td>
+                                        <td>4ft x 4ft x 6ft</td>
+                                        <td>Quiet / Timid Cats</td>
+                                        <td>$45 / night</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Deluxe Patio Suite</strong></td>
+                                        <td>6ft x 6ft x 7ft</td>
+                                        <td>Active Explorers</td>
+                                        <td>$65 / night</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Royal Feline Penthouse</strong></td>
+                                        <td>8ft x 8ft x 8ft</td>
+                                        <td>Multiple Cats / Royal stay</td>
+                                        <td>$90 / night</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 4: Custom Bedding & Scents Setups -->
+        <section class="section-centered py-5">
+            <div class="container text-center">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6 text-start">
+                        <h2 class="mb-4">Bring Their Favorite Comfort Items</h2>
+                        <p class="mb-4">Familiar smells make cats adapt much faster. I encourage you to bring your cat's favorite fleece blanket, scratching pads, or soft toys. Having objects saturated with home scents in their suite helps lower stress markers and prevents territorial confusion during their first few nights.</p>
+                        <a href="booking.html" class="btn-custom-secondary">See Prep Packing List</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1597843798188-4a57041793b8?q=80&w=600&auto=format&fit=crop" alt="Cat Bedding" style="border-radius: 6px; border: 2px solid var(--card-border);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Insulin & Chronic Care Logs -->
+        <section class="bg-light py-5">
+            <div class="container text-center">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6 order-lg-2 text-start">
+                        <h2 class="mb-4">Detailed Medication & Chronic Care Logs</h2>
+                        <p class="mb-4">Managing medical needs requires absolute clinical precision. I chart all chronic treatments, pill administration, and insulin injections. Every dosage is logged in a transparent digital care journal, detailing times, quantities, and cat vitals, giving you secure updates throughout their boarding period.</p>
+                        <a href="services.html" class="btn-custom-primary">View Medical FAQs</a>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?q=80&w=600&auto=format&fit=crop" alt="Autoclaved Medical Bench" style="border-radius: 6px; border: 2px solid var(--card-border);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Suite Ventilation Specifications -->
+        <section class="section-centered py-5">
+            <div class="container text-center">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6 text-start">
+                        <h2 class="mb-4">HEPA Air Filtration & Odor Control</h2>
+                        <p class="mb-4">Air hygiene is crucial to keep cats healthy. My facility features custom ducting configurations that circulate fresh, HEPA-filtered air through individual suites. This ensures that guest spaces have a dedicated supply of clean, odor-free, and allergen-free air, eliminating airborne pathogen circulation.</p>
+                        <a href="services.html" class="btn-custom-secondary">See Ventilation Details</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?q=80&w=600&auto=format&fit=crop" alt="Cat in Fresh Room" style="border-radius: 6px; border: 2px solid var(--card-border);">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-3 col-md-6">
+                    <a class="d-flex align-items-center mb-3 text-decoration-none" href="index.html" style="max-width: 180px; height: 50px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#ffffff" class="bi bi-cat me-2" viewBox="0 0 16 16">
+                            <path d="M14 13.5a.5.5 0 0 1-.5.5h-6a.5.5 0 0 1-.5-.5c0-1.105.895-2 2-2h1c1.105 0 2 .895 2 2M10 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4m.5-3a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m-4.225.105a.5.5 0 0 0-.65-.228L3.12 6.136a.5.5 0 1 0 .428.904l2.505-1.253a.5.5 0 0 0 .228-.65L5.775 5.1M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5c0-1.307-.821-2.42-2-2.859V9.5a.5.5 0 0 0-.154-.354l-.846-.846v-.868c.552-.16 1-.72 1-1.378a1.5 1.5 0 0 0-3 0c0 .657.448 1.218 1 1.378v.868L8.646 9.146A.5.5 0 0 0 8.5 9.5v1.141C7.32 11.08 6.5 12.193 6.5 13.5v.5H2.5c-.552 0-1-.448-1-1v-4.141c0-1.12.637-2.17 1.646-2.67l2.5-1.25a.5.5 0 0 0 .228-.651l-.5-1a.5.5 0 0 0-.895 0l-.5 1A1.5 1.5 0 0 1 3.5 5h-.646a1.5 1.5 0 0 0-1.5 1.5v7Z"/>
+                        </svg>
+                        <span style="font-weight: 580; font-size: 1.15rem; color: #ffffff; font-family: 'Outfit', sans-serif; letter-spacing: 0.5px;">Whisker Suites</span>
+                    </a>
+                    <p class="mb-3 text-white-50">I offer serene, specialized feline boarding options and suite experiences to keep your cat calm and secure.</p>
+                    <div class="social-icons d-flex">
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Elena</a></li>
+                        <li><a href="services.html">Boarding Services</a></li>
+                        <li><a href="pricing.html">Suites Pricing</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Resources</h5>
+                    <ul class="footer-links">
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="booking.html">Book a Suite</a></li>
+                        <li><a href="blog.html">Feline Blog</a></li>
+                        <li><a href="contact.html">Contact Info</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Newsletter</h5>
+                    <p class="text-white-50 mb-3">Subscribe to get tips on cat care and exclusive booking offers.</p>
+                    <form id="newsletter-form" class="d-flex">
+                        <input type="email" class="form-control me-2" placeholder="Your Email" required style="border-radius: 6px;">
+                        <button type="submit" class="btn btn-subscribe" style="border-radius: 6px;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row pt-4 border-top border-white-10">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">© 2026 Whisker Suites. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+                    <a href="404.html" class="text-white-50 text-decoration-none me-3">Privacy Policy</a>
+                    <a href="coming-soon.html" class="text-white-50 text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" title="Back to Top" aria-label="Back to Top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap Bundle with Popper JS via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whisker Suites | 404 Page Not Found</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <!-- Bootstrap 5 CSS via CDN -->
+    <link id="bootstrap-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom StyleSheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <style>
+        body {
+            padding-top: 0 !important;
+        }
+        .auth-toggles {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1050;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="auth-toggles d-flex gap-2">
+        <button class="toggle-btn" id="theme-toggle" type="button"><i class="bi bi-moon-fill"></i></button>
+        <button class="toggle-btn" id="rtl-toggle" type="button"><span class="toggle-text" style="font-size: 0.75rem; font-weight: 600;">RTL</span></button>
+    </div>
+
+    <div class="auth-container text-center">
+        <div class="auth-card p-5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="var(--primary-color)" class="bi bi-question-circle mb-3" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.01.388-1.01.94"/>
+            </svg>
+            <h1 class="h2-title mb-2">Lost Kitty!</h1>
+            <h2 class="h3-title text-muted mb-4" style="font-size: 1.5rem;">404 - Page Not Found</h2>
+            <p class="mb-4">Oops! The page you are looking for has wandered off, just like a curious cat in the garden. Let's get you back home.</p>
+            <a href="index.html" class="btn-custom-primary w-100">Return to Safeland</a>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper JS via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
