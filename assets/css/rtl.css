@@ -13,6 +13,11 @@
     left: 30px;
 }
 
+[dir="rtl"] .auth-toggles {
+    right: auto;
+    left: 20px;
+}
+
 [dir="rtl"] footer .social-icons a {
     margin-right: 0;
     margin-left: 1rem;

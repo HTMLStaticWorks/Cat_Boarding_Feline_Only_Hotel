@@ -20,6 +20,7 @@
 
 [data-bs-theme="dark"] .hero-section {
     background-color: var(--tertiary-color);
+    border-bottom: none;
 }
 
 [data-bs-theme="dark"] .custom-card {
@@ -40,6 +41,13 @@
 [data-bs-theme="dark"] .toggle-btn:hover {
     background-color: var(--secondary-color);
     color: #121212;
+}
+
+/* Active RTL button style in dark theme */
+[data-bs-theme="dark"][dir="rtl"] #rtl-toggle {
+    background-color: var(--secondary-color);
+    color: #121212;
+    border-color: var(--secondary-color);
 }
 
 [data-bs-theme="dark"] .nav-link {
@@ -158,4 +166,16 @@
 
 [data-bs-theme="dark"] .lead-text {
     color: var(--secondary-color) !important;
+}
+
+/* Golden Brand Logo and Name in Dark Theme */
+[data-bs-theme="dark"] .navbar-brand,
+[data-bs-theme="dark"] .navbar-brand span,
+[data-bs-theme="dark"] footer a span {
+    color: var(--secondary-color) !important;
+}
+
+[data-bs-theme="dark"] .navbar-brand svg,
+[data-bs-theme="dark"] footer a svg.bi-cat {
+    fill: var(--secondary-color) !important;
 }
