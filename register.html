@@ -18,24 +18,32 @@
         body {
             padding-top: 0 !important;
         }
+        .auth-container {
+            position: relative;
+            padding-top: 5rem !important;
+        }
         .auth-toggles {
-            position: fixed;
+            position: absolute;
             top: 20px;
             right: 20px;
             z-index: 1050;
+        }
+        [dir="rtl"] .auth-toggles {
+            right: auto;
+            left: 20px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Top-Right Fixed Switchers -->
-    <div class="auth-toggles d-flex gap-2">
-        <button class="toggle-btn" id="theme-toggle" type="button"><i class="bi bi-moon-fill"></i></button>
-        <button class="toggle-btn" id="rtl-toggle" type="button"><span class="toggle-text" style="font-size: 0.75rem; font-weight: 600;">RTL</span></button>
-    </div>
-
     <!-- Centered Card Container -->
     <div class="auth-container">
+        <!-- Top-Right Switchers -->
+        <div class="auth-toggles d-flex gap-2">
+            <button class="toggle-btn" id="theme-toggle" type="button"><i class="bi bi-moon-fill"></i></button>
+            <button class="toggle-btn" id="rtl-toggle" type="button"><span class="toggle-text" style="font-size: 0.75rem; font-weight: 600;">RTL</span></button>
+        </div>
+
         <div class="auth-card">
             <!-- Brand Logo inside the card -->
             <div class="text-center mb-4">
