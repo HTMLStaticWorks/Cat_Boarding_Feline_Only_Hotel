@@ -275,6 +275,10 @@ body {
     border-right: 1px solid var(--card-border);
 }
 
+.offcanvas .navbar-nav .nav-link {
+    width: fit-content;
+}
+
 /* Hero Section */
 .hero-section {
     position: relative;
@@ -894,5 +898,22 @@ footer .btn-subscribe:hover {
     opacity: 0.9;
     transform: scale(1.02);
 }
+.auth-brand-link:focus {
+    outline: none;
+}
 
-
+/* Mobile Typography Fixes */
+@media (max-width: 767.98px) {
+    h1, .h1-title, .display-2, .display-3 {
+        font-size: 2.2rem !important;
+    }
+    h2, .h2-title {
+        font-size: 1.75rem !important;
+    }
+    h3, .h3-title {
+        font-size: 1.35rem !important;
+    }
+    h4, h5, h6, .sub-heading {
+        font-size: 1.15rem !important;
+    }
+}

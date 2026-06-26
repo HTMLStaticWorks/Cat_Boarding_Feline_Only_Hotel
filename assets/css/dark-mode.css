@@ -85,11 +85,11 @@
 
 [data-bs-theme="dark"] footer a.d-flex.align-items-center.mb-3 svg,
 [data-bs-theme="dark"] footer a.d-flex.align-items-center.mb-3 svg path {
-    fill: #ffffff !important;
+    fill: var(--secondary-color) !important;
 }
 
 [data-bs-theme="dark"] footer a.d-flex.align-items-center.mb-3 span {
-    color: #ffffff !important;
+    color: var(--secondary-color) !important;
 }
 
 [data-bs-theme="dark"] footer .border-white-10 {
@@ -194,6 +194,7 @@
 }
 
 [data-bs-theme="dark"] .navbar-brand svg,
-[data-bs-theme="dark"] footer a svg.bi-cat {
+[data-bs-theme="dark"] footer a svg.bi-cat,
+[data-bs-theme="dark"] .auth-brand-link svg {
     fill: var(--secondary-color) !important;
 }
