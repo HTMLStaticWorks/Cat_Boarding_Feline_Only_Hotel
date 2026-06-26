@@ -3,6 +3,19 @@
     text-align: right;
 }
 
+[dir="rtl"] p, 
+[dir="rtl"] span, 
+[dir="rtl"] h1, 
+[dir="rtl"] h2, 
+[dir="rtl"] h3, 
+[dir="rtl"] h4, 
+[dir="rtl"] h5, 
+[dir="rtl"] h6, 
+[dir="rtl"] a, 
+[dir="rtl"] li {
+    unicode-bidi: plaintext;
+}
+
 [dir="rtl"] .password-toggle-icon {
     left: 15px;
     right: auto;
