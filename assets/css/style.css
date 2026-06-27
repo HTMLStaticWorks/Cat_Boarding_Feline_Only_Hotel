@@ -392,6 +392,12 @@ body {
     transition: transform var(--transition-speed) ease;
 }
 
+@media (min-width: 1200px) {
+    .custom-card-img {
+        height: 160px;
+    }
+}
+
 .custom-card:hover .custom-card-img {
     transform: scale(1.03);
 }
