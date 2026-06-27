@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
@@ -70,7 +70,11 @@
         .top-navbar {
             background-color: var(--card-bg);
             border-bottom: 1px solid var(--card-border);
-            padding: 1rem 1.5rem;
+            padding: 1.25rem 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+            box-shadow: var(--shadow-sm);
         }
         .content-body {
             padding: 2rem;
@@ -121,6 +125,9 @@
             }
             [dir="rtl"] .dashboard-content {
                 margin-right: 0;
+            }
+            .top-navbar {
+                padding: 1.25rem 1rem;
             }
         }
     </style>
