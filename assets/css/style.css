@@ -338,6 +338,21 @@ body {
     color: var(--primary-color);
 }
 
+/* Mobile Responsive Hero Section styles */
+@media (max-width: 767.98px) {
+    .hero-section {
+        padding: 5rem 0 !important;
+    }
+    .hero-section h1, 
+    .hero-section .display-3 {
+        font-size: clamp(2rem, 7vw, 3rem) !important;
+        line-height: 1.25 !important;
+    }
+    .hero-section .lead-text {
+        font-size: 1.1rem !important;
+    }
+}
+
 /* Cards Design Rules */
 .custom-card {
     background-color: var(--card-bg);
