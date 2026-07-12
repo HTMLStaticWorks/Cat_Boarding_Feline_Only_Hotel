@@ -83,14 +83,24 @@
     </div>
 
     <main>
-        <!-- Section 1: Hero Section (Premium / Alternative Layout) -->
-        <section class="hero-section hero-bg-img hero-home-2 text-center">
-            <div class="container text-center text-white">
-                <h1 class="display-2 text-white mb-3" style="font-weight: 580; letter-spacing: -0.03em;">Stress-Free Feline <span class="text-gradient-gold">Sanctuary.</span></h1>
-                <p class="lead-text text-white-50 max-width-600 mx-auto mb-5" style="font-weight: 430; max-width: 650px;">A dedicated veterinary-aligned hotel built around feline behavior science. No noise. No dogs. Pure serene comfort.</p>
-                <div class="d-flex justify-content-center gap-3">
-                    <a href="booking.html" class="btn-custom-primary">Request Invitation</a>
-                    <a href="gallery.html" class="btn-custom-secondary">Explore Suites</a>
+        <!-- Section 1: Hero Section (Premium Split Layout) -->
+        <section class="hero-section text-start py-5" style="background-color: var(--tertiary-color);">
+            <div class="container py-4">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <span class="badge bg-primary text-white px-3 py-2 mb-3" style="font-size: 0.85rem; font-weight: 500; border-radius: 30px;">Veterinary-Aligned Sanctuary</span>
+                        <h1 class="display-3 mb-3" style="font-weight: 580; color: var(--primary-color); letter-spacing: -0.03em;">Stress-Free Feline <span class="text-gradient-gold" style="background: var(--secondary-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Sanctuary.</span></h1>
+                        <p class="lead-text mb-4" style="color: var(--text-muted); font-size: 1.15rem; font-weight: 400;">A premium cats-only hotel sanctuary focusing on feline psychology, cozy soundproofed cabins, and dedicated vet care. Designed exclusively to eliminate stress.</p>
+                        <div class="d-flex gap-3">
+                            <a href="booking.html" class="btn-custom-primary">Request Invitation</a>
+                            <a href="gallery.html" class="btn-custom-secondary">Explore Suites</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-img-wrapper" style="padding: 10px; background: var(--card-bg); border-radius: 12px; box-shadow: var(--shadow-lg); border: 1px solid var(--card-border);">
+                            <img class="img-fluid" src="https://images.unsplash.com/photo-1513360309081-36f5e878fc11?q=80&w=600&auto=format&fit=crop" alt="Premium Feline Care" style="border-radius: 8px; width: 100%; height: 380px; object-fit: cover;">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -112,36 +122,51 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=600&auto=format&fit=crop" alt="Feline Comfort Science" style="border-radius: 6px; border: 2px solid var(--card-border); max-width: 500px; height: 350px; object-fit: cover; width: 100%;">
+                        <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?q=80&w=600&auto=format&fit=crop" alt="Feline Comfort Science" style="border-radius: 6px; border: 2px solid var(--card-border); max-width: 500px; height: 350px; object-fit: cover; width: 100%;">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 3: Luxury Suite Tour -->
+        <!-- Section 3: Luxury Suite Tour (Alternating Layout) -->
         <section class="bg-light py-5">
-            <div class="container text-center">
-                <h2 class="mb-5">Tailored Boarding Options</h2>
-                <div class="row g-4 justify-content-center">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="custom-card">
-                            <img class="custom-card-img" src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=600&auto=format&fit=crop" alt="The Cozy Hideaway" style="object-position: top;">
-                            <div class="custom-card-content">
-                                <h3 class="h4-title">The Cozy Hideaway</h3>
-                                <p>Designed specifically for timid or elder cats. Multi-tiered layout with sheepskin bedding, private sleeping boxes, and minimal glass exposure to ensure a high sense of safety.</p>
-                                <a href="service-details.html" class="btn-custom-secondary custom-card-btn">View Suite Specs</a>
-                            </div>
-                        </div>
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="mb-3">Tailored Boarding Options</h2>
+                    <p class="lead mx-auto text-muted mb-5" style="max-width: 600px;">Every cat has a unique personality. Choose the perfect environment tailored to their stress-tolerance and activity levels.</p>
+                </div>
+                
+                <!-- Row 1: Cozy Hideaway -->
+                <div class="row align-items-center g-5 mb-5">
+                    <div class="col-lg-6">
+                        <img class="img-fluid rounded shadow-sm" src="https://images.unsplash.com/photo-1574158622643-69d34d72650a?q=80&w=600&auto=format&fit=crop" alt="The Cozy Hideaway" style="border-radius: 8px; width: 100%; height: 350px; object-fit: cover;">
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="custom-card">
-                            <img class="custom-card-img" src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?q=80&w=600&auto=format&fit=crop" alt="The Patio Vista" style="object-position: center;">
-                            <div class="custom-card-content">
-                                <h3 class="h4-title">The Patio Vista</h3>
-                                <p>Features fully secure window ledges allowing cats to monitor garden birds and butterflies safely. Perfect for curious, highly interactive feline guests.</p>
-                                <a href="service-details.html" class="btn-custom-secondary custom-card-btn">View Suite Specs</a>
-                            </div>
-                        </div>
+                    <div class="col-lg-6 text-start">
+                        <h3 class="h3-title mb-3">The Cozy Hideaway</h3>
+                        <p class="mb-4">Designed specifically for timid, elder, or highly sensitive cats. This suite features multi-tiered cozy hideouts, sheepskin bedding, private sleeping boxes, and minimal glass exposure to ensure a high sense of safety and isolation from visual triggers.</p>
+                        <ul class="mb-4 list-unstyled">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Sheepskin lined nesting boxes</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Minimal glass for absolute privacy</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Multi-tiered quiet climbing steps</li>
+                        </ul>
+                        <a href="service-details.html" class="btn-custom-secondary">Explore Suite Specs</a>
+                    </div>
+                </div>
+
+                <!-- Row 2: Patio Vista -->
+                <div class="row align-items-center g-5 flex-lg-row-reverse">
+                    <div class="col-lg-6">
+                        <img class="img-fluid rounded shadow-sm" src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?q=80&w=600&auto=format&fit=crop" alt="The Patio Vista" style="border-radius: 8px; width: 100%; height: 350px; object-fit: cover;">
+                    </div>
+                    <div class="col-lg-6 text-start">
+                        <h3 class="h3-title mb-3">The Patio Vista</h3>
+                        <p class="mb-4">Designed for curious, highly active, and confident feline guests. Features fully secure window ledges and bird feeders directly outside, allowing cats to monitor garden birds and butterflies safely while relaxing.</p>
+                        <ul class="mb-4 list-unstyled">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> HD window ledge birds view</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Fully secure mesh outdoor airflow</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Interactive toy setup & climbing poles</li>
+                        </ul>
+                        <a href="service-details.html" class="btn-custom-secondary">Explore Suite Specs</a>
                     </div>
                 </div>
             </div>
@@ -152,7 +177,7 @@
             <div class="container">
                 <div class="row align-items-center g-5">
                     <div class="col-lg-6">
-                        <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=600&auto=format&fit=crop" alt="Care & Medication Log" style="border-radius: 6px; border: 2px solid var(--card-border); width: 100%;">
+                        <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?q=80&w=600&auto=format&fit=crop" alt="Care & Medication Log" style="border-radius: 6px; border: 2px solid var(--card-border); width: 100%;">
                     </div>
                     <div class="col-lg-6 text-start">
                         <h2 class="mb-4">Professional Health & Medication Support</h2>
@@ -169,7 +194,7 @@
         </section>
 
 
-        <!-- Section 6: Pheromone & Environment Control -->
+        <!-- Section 5: Pheromone & Environment Control -->
         <section class="section-centered py-5">
             <div class="container text-center">
                 <div class="row align-items-center g-5">
@@ -179,13 +204,13 @@
                         <a href="services.html" class="btn-custom-secondary">View Comfort Systems</a>
                     </div>
                     <div class="col-lg-6">
-                        <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?q=80&w=600&auto=format&fit=crop" alt="Calmed Cat" style="border-radius: 6px; border: 2px solid var(--card-border);">
+                        <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?q=80&w=600&auto=format&fit=crop" alt="Calmed Cat" style="border-radius: 6px; border: 2px solid var(--card-border);">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 7: Stress-Free Check-In Guidelines -->
+        <!-- Section 6: Stress-Free Check-In Guidelines -->
         <section class="bg-light py-5">
             <div class="container text-center">
                 <div class="row align-items-center g-5">
@@ -195,13 +220,13 @@
                         <a href="booking.html" class="btn-custom-primary">Plan Check-In</a>
                     </div>
                     <div class="col-lg-6 order-lg-1">
-                        <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?q=80&w=600&auto=format&fit=crop" alt="Cat in Carrier" style="max-height: 350px; object-fit: cover; width: 100%; border-radius: 6px; border: 2px solid var(--card-border);">
+                        <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1606214174585-fe31582d63e6?q=80&w=600&auto=format&fit=crop" alt="Cat in Carrier" style="max-height: 350px; object-fit: cover; width: 100%; border-radius: 6px; border: 2px solid var(--card-border);">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 8: Custom Diet Prep and Raw Kitchen -->
+        <!-- Section 7: Custom Diet Prep and Raw Kitchen -->
         <section class="section-centered py-5">
             <div class="container text-center">
                 <div class="row align-items-center g-5">
@@ -211,15 +236,15 @@
                         <a href="services.html" class="btn-custom-secondary">See Diet Plan details</a>
                     </div>
                     <div class="col-lg-6">
-                        <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?q=80&w=600&auto=format&fit=crop" alt="Cat Eating" style="max-height: 350px; object-fit: cover; object-position: center 60%; width: 100%; border-radius: 6px; border: 2px solid var(--card-border);">
+                        <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?q=80&w=600&auto=format&fit=crop" alt="Cat Eating" style="max-height: 350px; object-fit: cover; object-position: center 60%; width: 100%; border-radius: 6px; border: 2px solid var(--card-border);">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 9: Secure Landing CTA -->
-        <section class="section-centered py-5">
-            <div class="container">
+        <!-- Section 5: Secure Landing CTA -->
+        <section class="section-centered py-5 bg-light">
+            <div class="container text-center">
                 <h2 class="mb-4">Reserve Your Cat's Quiet Sanctuary</h2>
                 <p class="mb-5">Keep your feline companion safe, quiet, and pampered while you are away.</p>
                 <div class="d-flex justify-content-center gap-3">

@@ -6,7 +6,8 @@
     --tertiary-color: #F4F1EA; /* Soft Cream */
     --bg-color: #ffffff;
     --text-color: #1a2230;
-    --text-muted: #5e6b7e;
+    --text-muted: #4a5b78;
+    --secondary-color-text: #8e5e31;
     
     /* Premium Shadows & Gradients */
     --primary-gradient: linear-gradient(135deg, #2A4B7C 0%, #183054 100%);
@@ -100,6 +101,13 @@ p, li, span, label {
 strong, b, .bold-emphasis {
     font-weight: 500; /* Max weight for inline emphasis is 500 */
     font-size: 1.05rem; /* 0.9 to 1.2rem */
+}
+
+/* Form input placeholder contrast */
+.form-control::placeholder,
+.form-select::placeholder {
+    color: var(--text-muted) !important;
+    opacity: 0.85;
 }
 
 /* Button System */
@@ -265,7 +273,7 @@ body {
 }
 
 .navbar-nav .nav-link.active {
-    color: var(--secondary-color) !important;
+    color: var(--secondary-color-text) !important;
 }
 
 /* Offcanvas for mobile */
@@ -306,7 +314,7 @@ body {
 .hero-pricing { background-image: url('../images/hero-bg-pricing.png'); }
 .hero-gallery { background-image: url('../images/hero-bg-gallery.png'); }
 .hero-booking { background-image: url('../images/hero-bg-booking.png'); }
-.hero-contact { background-image: url('../images/hero-bg-contact.png'); }
+.hero-contact { background-image: linear-gradient(rgba(18, 30, 54, 0.85), rgba(18, 30, 54, 0.85)), url('../images/hero-bg-contact.png') !important; }
 
 .hero-bg-img::before {
     content: '';
@@ -315,8 +323,26 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(18, 30, 54, 0.65); /* dark overlay for premium blue theme */
+    background: rgba(18, 30, 54, 0.78); /* Darker overlay for high text contrast in light/dark modes */
     z-index: 1;
+}
+
+.text-gradient {
+    background: var(--secondary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.text-gradient-gold {
+    background: var(--secondary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.hero-section h1 {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
 .hero-bg-img .container {
@@ -395,6 +421,7 @@ body {
     width: 100%;
     height: 220px;
     object-fit: cover;
+    object-position: center;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border-bottom-left-radius: 0;
@@ -496,7 +523,7 @@ footer .social-icons a {
 }
 
 footer .social-icons a:hover {
-    color: var(--secondary-color);
+    color: var(--secondary-color-text);
 }
 
 footer .footer-title {
@@ -527,7 +554,7 @@ footer ul.footer-links a {
 
 footer ul.footer-links a:hover {
     padding-left: 5px;
-    color: var(--secondary-color);
+    color: var(--secondary-color-text);
 }
 
 footer .btn-subscribe {
