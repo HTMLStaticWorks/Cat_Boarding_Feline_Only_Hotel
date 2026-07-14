@@ -314,7 +314,7 @@ body {
 .hero-pricing { background-image: url('../images/hero-bg-pricing.png'); }
 .hero-gallery { background-image: url('../images/hero-bg-gallery.png'); }
 .hero-booking { background-image: url('../images/hero-bg-booking.png'); }
-.hero-contact { background-image: linear-gradient(rgba(18, 30, 54, 0.85), rgba(18, 30, 54, 0.85)), url('../images/hero-bg-contact.png') !important; }
+.hero-contact { background-image: url('../images/hero-bg-contact.png'); }
 
 .hero-bg-img::before {
     content: '';
@@ -343,6 +343,10 @@ body {
 
 .hero-section h1 {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.hero-lead-desc {
+    color: var(--text-muted);
 }
 
 .hero-bg-img .container {
@@ -420,7 +424,8 @@ body {
 .custom-card-img {
     width: 100%;
     height: 220px;
-    object-fit: cover;
+    object-fit: contain;
+    background-color: var(--tertiary-color);
     object-position: center;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -956,6 +961,201 @@ footer .btn-subscribe:hover {
         font-size: 2.2rem !important;
     }
     h2, .h2-title {
+    margin: -16px 0 0 -16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+[data-bs-theme="dark"] .marker-pin {
+    background: var(--secondary-color);
+    border-color: #1c1e21;
+}
+
+.marker-pin i {
+    transform: rotate(45deg);
+    color: #ffffff;
+    font-size: 1.05rem;
+    display: block;
+}
+
+[data-bs-theme="dark"] .marker-pin i {
+    color: #121212;
+}
+
+/* Marker hover animation */
+.custom-pulsing-marker:hover .marker-pin {
+    background: var(--secondary-color);
+    transform: rotate(-45deg) scale(1.15);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-bs-theme="dark"] .custom-pulsing-marker:hover .marker-pin {
+    background: var(--primary-color);
+}
+
+[data-bs-theme="dark"] .custom-pulsing-marker:hover .marker-pin i {
+    color: #ffffff;
+}
+
+.marker-pulse {
+    background: rgba(42, 75, 124, 0.25);
+    border-radius: 50%;
+    height: 18px;
+    width: 18px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -9px 0 0 -9px;
+    transform: rotateX(55deg);
+    z-index: -2;
+}
+
+[data-bs-theme="dark"] .marker-pulse {
+    background: rgba(212, 163, 115, 0.25);
+}
+
+.marker-pulse::after {
+    content: "";
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
+    position: absolute;
+    margin: -15px 0 0 -15px;
+    animation: pulsate 1.8s ease-out infinite;
+    opacity: 0;
+    box-shadow: 0 0 1px 2px var(--secondary-color);
+}
+
+[data-bs-theme="dark"] .marker-pulse::after {
+    box-shadow: 0 0 1px 2px var(--primary-color);
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(0.1, 0.1);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1.2, 1.2);
+        opacity: 0;
+    }
+}
+
+/* Custom Leaflet Popup Override */
+.leaflet-popup-content-wrapper {
+    background-color: var(--card-bg) !important;
+    color: var(--text-color) !important;
+    border-radius: 8px !important;
+    border: 1px solid var(--card-border) !important;
+    box-shadow: var(--shadow-md) !important;
+    font-family: var(--font-family) !important;
+    padding: 2px !important;
+}
+
+.leaflet-popup-tip {
+    background-color: var(--card-bg) !important;
+    border: 1px solid var(--card-border) !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+.leaflet-popup-close-button {
+    color: var(--text-muted) !important;
+    font-size: 16px !important;
+    padding: 6px 10px 0 0 !important;
+}
+
+.leaflet-popup-close-button:hover {
+    color: var(--primary-color) !important;
+    background: transparent !important;
+}
+
+[data-bs-theme="dark"] .leaflet-popup-close-button:hover {
+    color: var(--secondary-color) !important;
+}
+
+.map-popup-card {
+    padding: 5px 8px;
+}
+
+.map-popup-card h6 {
+    color: var(--primary-color);
+    font-weight: 680;
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+[data-bs-theme="dark"] .map-popup-card h6 {
+    color: var(--secondary-color);
+}
+
+.map-popup-card p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: var(--text-muted);
+}
+
+.map-popup-card .btn-popup-directions {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+/* Mobile responsive fixes for map overlays */
+@media (max-width: 575.98px) {
+    .map-directions-panel {
+        position: relative !important;
+        bottom: auto !important;
+        start: auto !important;
+        margin: 10px !important;
+        max-width: none !important;
+        width: calc(100% - 20px) !important;
+    }
+    .map-wrapper {
+        height: auto !important;
+        display: flex;
+        flex-direction: column;
+    }
+    #contact-map {
+        height: 300px !important;
+    }
+    .map-view-controls {
+        top: 0 !important;
+        end: 0 !important;
+        margin: 8px !important;
+    }
+}
+
+.auth-brand-link,
+.auth-brand-link:hover,
+.auth-brand-link:focus,
+.auth-brand-link h1 {
+    color: var(--primary-color) !important;
+    text-decoration: none;
+    transition: opacity var(--transition-speed) ease, transform var(--transition-speed) ease;
+    display: inline-block;
+}
+.auth-brand-link:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+.auth-brand-link:focus {
+    outline: none;
+}
+
+/* Mobile Typography Fixes */
+@media (max-width: 767.98px) {
+    h1, .h1-title, .display-2, .display-3 {
+        font-size: 2.2rem !important;
+    }
+    h2, .h2-title {
         font-size: 1.75rem !important;
     }
     h3, .h3-title {
@@ -963,5 +1163,28 @@ footer .btn-subscribe:hover {
     }
     h4, h5, h6, .sub-heading {
         font-size: 1.15rem !important;
+    }
+}
+
+/* Tablet & 1024px View Heading Reductions */
+@media (max-width: 1024px) {
+    /* Section headings */
+    h2, .h2-title {
+        font-size: 2.2rem !important;
+    }
+    h3, .h3-title {
+        font-size: 1.8rem !important;
+    }
+
+    /* Card headings */
+    .custom-card h3,
+    .custom-card .h3-title {
+        font-size: 1.25rem !important;
+    }
+    .custom-card .h4-title {
+        font-size: 1.15rem !important;
+    }
+    .custom-card .h5-title {
+        font-size: 1.05rem !important;
     }
 }
