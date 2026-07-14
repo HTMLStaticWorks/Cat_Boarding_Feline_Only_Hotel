@@ -206,6 +206,21 @@
     fill: var(--secondary-color) !important;
 }
 
-[data-bs-theme="dark"] .hero-lead-desc {
+ [data-bs-theme="dark"] .hero-lead-desc {
     color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] .btn-custom-secondary {
+    color: var(--text-color) !important;
+    border-color: var(--text-color) !important;
+}
+
+[data-bs-theme="dark"] .btn-custom-secondary:hover {
+    color: #ffffff !important;
+    border-color: transparent !important;
+    background: var(--primary-gradient) !important;
+}
+
+[data-bs-theme="dark"] .hero-section .text-body {
+    color: var(--text-color) !important;
 }
