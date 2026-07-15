@@ -247,3 +247,12 @@
     -webkit-text-fill-color: transparent !important;
     display: inline-block;
 }
+
+[data-bs-theme="dark"] footer .social-icons a {
+    color: var(--text-muted) !important;
+}
+
+[data-bs-theme="dark"] footer .social-icons a:hover,
+[data-bs-theme="dark"] footer .social-icons a:hover i {
+    color: var(--secondary-color-text) !important;
+}
