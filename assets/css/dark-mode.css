@@ -227,3 +227,16 @@
 [data-bs-theme="dark"] .hero-bg-img::before {
     background: rgba(255, 255, 255, 0.1) !important;
 }
+
+[data-bs-theme="dark"] .text-gradient,
+[data-bs-theme="dark"] .text-gradient-gold {
+    background: none !important;
+    -webkit-text-fill-color: var(--secondary-color-text, #8e5e31) !important;
+    color: var(--secondary-color-text, #8e5e31) !important;
+}
+
+[data-bs-theme="dark"] .hero-bg-img h1,
+[data-bs-theme="dark"] .hero-bg-img p,
+[data-bs-theme="dark"] .hero-bg-img span {
+    text-shadow: 0 1px 6px rgba(255, 255, 255, 0.9) !important;
+}
