@@ -225,5 +225,5 @@
 
 /* Light overlay in dark mode for hero sections with background images */
 [data-bs-theme="dark"] .hero-bg-img::before {
-    background: rgba(255, 255, 255, 0.82) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
 }
