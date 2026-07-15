@@ -1,12 +1,12 @@
-/* Dark Mode Overrides - Aligned to White and Light Shades */
+/* Dark Mode Overrides - Premium Dark Theme Redesign */
 [data-bs-theme="dark"] {
-    --bg-color: #ffffff;
-    --text-color: #1a2230;
-    --text-muted: #4a5b78;
-    --card-bg: #ffffff;
-    --card-border: rgba(42, 75, 124, 0.06);
-    --tertiary-color: #F4F1EA;
-    --secondary-color-text: #8e5e31;
+    --bg-color: #121824; /* Deep premium blue-black */
+    --text-color: #e2e8f0; /* Soft off-white */
+    --text-muted: #94a3b8; /* Cool slate gray */
+    --card-bg: #1a2336; /* Slightly lighter navy slate for cards */
+    --card-border: rgba(255, 255, 255, 0.08);
+    --tertiary-color: #161e2e; /* Muted section background */
+    --secondary-color-text: #E9C46A; /* Bright warm gold for highlights */
 }
 
 [data-bs-theme="dark"] body {
@@ -15,12 +15,12 @@
 }
 
 [data-bs-theme="dark"] header.sticky-header {
-    background-color: #ffffff !important;
+    background-color: #121824 !important;
     border-bottom: 1px solid var(--card-border) !important;
 }
 
 [data-bs-theme="dark"] .hero-section {
-    background-color: #ffffff !important;
+    background-color: #121824 !important;
     border-bottom: none;
 }
 
@@ -29,25 +29,29 @@
     border-color: var(--card-border) !important;
 }
 
+[data-bs-theme="dark"] .custom-card p {
+    color: var(--text-muted) !important;
+}
+
 [data-bs-theme="dark"] .offcanvas {
-    background-color: #ffffff !important;
+    background-color: #121824 !important;
     color: var(--text-color) !important;
 }
 
 [data-bs-theme="dark"] .toggle-btn {
-    border-color: var(--primary-color) !important;
-    color: var(--primary-color) !important;
+    border-color: var(--secondary-color-text) !important;
+    color: var(--secondary-color-text) !important;
 }
 
 [data-bs-theme="dark"] .toggle-btn:hover {
-    background-color: var(--primary-color) !important;
-    color: #ffffff !important;
+    background-color: var(--secondary-color-text) !important;
+    color: #121824 !important;
 }
 
 [data-bs-theme="dark"][dir="rtl"] #rtl-toggle {
-    background-color: var(--primary-color) !important;
-    color: #ffffff !important;
-    border-color: var(--primary-color) !important;
+    background-color: var(--secondary-color-text) !important;
+    color: #121824 !important;
+    border-color: var(--secondary-color-text) !important;
 }
 
 [data-bs-theme="dark"] .nav-link {
@@ -55,11 +59,11 @@
 }
 
 [data-bs-theme="dark"] .navbar-nav .nav-link.active {
-    color: var(--primary-color) !important;
+    color: var(--secondary-color-text) !important;
 }
 
 [data-bs-theme="dark"] footer {
-    background-color: #ffffff !important;
+    background-color: #0c101a !important;
     border-top: 1px solid var(--card-border) !important;
 }
 
@@ -71,11 +75,11 @@
 }
 
 [data-bs-theme="dark"] footer .footer-title {
-    color: var(--primary-color) !important;
+    color: #ffffff !important;
 }
 
 [data-bs-theme="dark"] footer ul.footer-links a:hover {
-    color: var(--primary-color) !important;
+    color: var(--secondary-color-text) !important;
 }
 
 [data-bs-theme="dark"] footer p.text-white-50, 
@@ -85,11 +89,11 @@
 
 [data-bs-theme="dark"] footer a.d-flex.align-items-center.mb-3 svg,
 [data-bs-theme="dark"] footer a.d-flex.align-items-center.mb-3 svg path {
-    fill: var(--primary-color) !important;
+    fill: var(--secondary-color-text) !important;
 }
 
 [data-bs-theme="dark"] footer a.d-flex.align-items-center.mb-3 span {
-    color: var(--primary-color) !important;
+    color: #ffffff !important;
 }
 
 [data-bs-theme="dark"] footer .border-white-10 {
@@ -98,7 +102,7 @@
 
 [data-bs-theme="dark"] .form-control,
 [data-bs-theme="dark"] .form-select {
-    background-color: #ffffff !important;
+    background-color: var(--card-bg) !important;
     border-color: var(--card-border) !important;
     color: var(--text-color) !important;
 }
@@ -106,47 +110,47 @@
 [data-bs-theme="dark"] .form-control::placeholder,
 [data-bs-theme="dark"] .form-select::placeholder {
     color: var(--text-muted) !important;
-    opacity: 0.85;
+    opacity: 0.65;
 }
 
 [data-bs-theme="dark"] .form-control:focus,
 [data-bs-theme="dark"] .form-select:focus {
-    background-color: #ffffff !important;
+    background-color: var(--card-bg) !important;
     color: var(--text-color) !important;
-    border-color: var(--primary-color) !important;
-    box-shadow: 0 0 0 0.25rem rgba(42, 75, 124, 0.15) !important;
+    border-color: var(--secondary-color-text) !important;
+    box-shadow: 0 0 0 0.25rem rgba(233, 196, 106, 0.15) !important;
 }
 
 [data-bs-theme="dark"] .accordion-item {
-    background-color: #ffffff !important;
+    background-color: var(--card-bg) !important;
     color: var(--text-color) !important;
     border-color: var(--card-border) !important;
 }
 
 [data-bs-theme="dark"] .accordion-button {
-    background-color: #ffffff !important;
+    background-color: var(--card-bg) !important;
     color: var(--text-color) !important;
 }
 
 [data-bs-theme="dark"] .accordion-button:not(.collapsed) {
-    background-color: rgba(42, 75, 124, 0.08) !important;
-    color: var(--primary-color) !important;
+    background-color: rgba(233, 196, 106, 0.08) !important;
+    color: var(--secondary-color-text) !important;
 }
 
 [data-bs-theme="dark"] .modal-content {
-    background-color: #ffffff !important;
+    background-color: var(--card-bg) !important;
     color: var(--text-color) !important;
     border-color: var(--card-border) !important;
 }
 
 /* Dashboard Dark Overrides */
 [data-bs-theme="dark"] .sidebar {
-    background-color: #ffffff !important;
+    background-color: var(--card-bg) !important;
     border-right: 1px solid var(--card-border) !important;
 }
 
 [data-bs-theme="dark"] .dashboard-card {
-    background-color: #ffffff !important;
+    background-color: var(--card-bg) !important;
     border-color: var(--card-border) !important;
 }
 
@@ -156,7 +160,7 @@
 
 [data-bs-theme="dark"] .table-striped>tbody>tr:nth-of-type(odd)>* {
     color: var(--text-color) !important;
-    --bs-table-bg-type: rgba(42, 75, 124, 0.02) !important;
+    --bs-table-bg-type: rgba(255, 255, 255, 0.02) !important;
 }
 
 [data-bs-theme="dark"] .table>thead {
@@ -177,31 +181,31 @@
 [data-bs-theme="dark"] .h2-title,
 [data-bs-theme="dark"] h3,
 [data-bs-theme="dark"] .h3-title {
-    color: var(--primary-color) !important;
+    color: #ffffff !important;
 }
 
 [data-bs-theme="dark"] h4,
 [data-bs-theme="dark"] h5,
 [data-bs-theme="dark"] h6,
 [data-bs-theme="dark"] .sub-heading {
-    color: var(--text-color) !important;
+    color: #ffffff !important;
 }
 
 [data-bs-theme="dark"] .lead-text {
-    color: var(--text-color) !important;
+    color: var(--secondary-color-text) !important;
 }
 
 /* Golden Brand Logo and Name in Dark Theme */
 [data-bs-theme="dark"] .navbar-brand,
 [data-bs-theme="dark"] .navbar-brand span,
 [data-bs-theme="dark"] footer a span {
-    color: var(--primary-color) !important;
+    color: #ffffff !important;
 }
 
 [data-bs-theme="dark"] .navbar-brand svg,
 [data-bs-theme="dark"] footer a svg.bi-cat,
 [data-bs-theme="dark"] .auth-brand-link svg {
-    fill: var(--primary-color) !important;
+    fill: var(--secondary-color-text) !important;
 }
 
 [data-bs-theme="dark"] .hero-lead-desc {
@@ -209,34 +213,37 @@
 }
 
 [data-bs-theme="dark"] .btn-custom-secondary {
-    color: var(--primary-color) !important;
-    border-color: var(--primary-color) !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    background: transparent !important;
 }
 
 [data-bs-theme="dark"] .btn-custom-secondary:hover {
-    color: #ffffff !important;
-    border-color: transparent !important;
-    background: var(--primary-gradient) !important;
+    color: #121824 !important;
+    border-color: var(--secondary-color-text) !important;
+    background: var(--secondary-color-text) !important;
 }
 
 [data-bs-theme="dark"] .hero-section .text-body {
-    color: var(--text-color) !important;
+    color: #ffffff !important;
 }
 
-/* Light overlay in dark mode for hero sections with background images */
+/* Premium dark overlay in dark mode to make hero background images clear and keep white text readable */
 [data-bs-theme="dark"] .hero-bg-img::before {
-    background: rgba(255, 255, 255, 0.1) !important;
-}
-
-[data-bs-theme="dark"] .text-gradient,
-[data-bs-theme="dark"] .text-gradient-gold {
-    background: none !important;
-    -webkit-text-fill-color: var(--secondary-color-text, #8e5e31) !important;
-    color: var(--secondary-color-text, #8e5e31) !important;
+    background: rgba(18, 24, 36, 0.72) !important;
 }
 
 [data-bs-theme="dark"] .hero-bg-img h1,
 [data-bs-theme="dark"] .hero-bg-img p,
 [data-bs-theme="dark"] .hero-bg-img span {
-    text-shadow: 0 1px 6px rgba(255, 255, 255, 0.9) !important;
+    color: #ffffff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-bs-theme="dark"] .text-gradient,
+[data-bs-theme="dark"] .text-gradient-gold {
+    background: linear-gradient(135deg, #E9C46A 0%, #D4A373 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    display: inline-block;
 }
